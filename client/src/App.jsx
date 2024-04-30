@@ -45,7 +45,7 @@ function App() {
         "Resultado 3 = ", resultado_3, "\n")
       try {
         let classificacao = ""
-        let response = await axios.post('http://127.0.0.1:8080/calcular_determinante',
+        let response = await axios.post('https://gabrielalter14.pythonanywhere.com/calcular_determinante',
           {
             matriz_coeficientes: [
               [valor_11, valor_12, valor_13],
@@ -55,7 +55,7 @@ function App() {
           });
           let resultMatrizA = response.data.determinante;
 
-        let responsex = await axios.post('http://127.0.0.1:8080/calcular_determinante',
+        let responsex = await axios.post('https://gabrielalter14.pythonanywhere.com/calcular_determinante',
           {
             matriz_coeficientes: [
               [resultado_1, valor_12, valor_13],
@@ -65,7 +65,7 @@ function App() {
           });
         let resultMatrizX = responsex.data.determinante;
 
-        let responsey = await axios.post('http://127.0.0.1:8080/calcular_determinante',
+        let responsey = await axios.post('https://gabrielalter14.pythonanywhere.com/calcular_determinante',
           {
             matriz_coeficientes: [
               [valor_11, resultado_1, valor_13],
@@ -75,7 +75,7 @@ function App() {
           });
           let resultMatrizY = responsey.data.determinante;
 
-        let responsez = await axios.post('http://127.0.0.1:8080/calcular_determinante',
+        let responsez = await axios.post('https://gabrielalter14.pythonanywhere.com/calcular_determinante',
           {
             matriz_coeficientes: [
               [valor_11, valor_12, resultado_1],
